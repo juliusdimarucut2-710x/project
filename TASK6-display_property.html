@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab Task 6-1</title>
+
+        <style>
+            body {
+                text-align: center;
+            }
+            
+            .sign input{
+                margin-left: 38%;
+                display: block;
+            }
+
+            input {
+                margin: 5px;
+            }
+
+            .survey p {
+                text-align: left;
+            }
+
+            .survey p, button {
+                width: 50%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .survey button {
+                width: 10%;
+            }
+
+            .google {
+                text-align: center;
+                margin-top: 50px;             
+            }
+
+            .google input {
+                display: block;
+                margin: 10px auto;
+                border-radius: 30px;
+                border: 1px solid;
+                width: 85%;
+                height: 20px;
+            }
+            
+            .signup input {
+                height: 2em;
+            }
+
+            .signup input + input + input{
+                display: block;
+                width: 43.8%;
+                margin-left: 27.5%;
+            }
+
+            .signup {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .signup button {
+                margin-top: 10px;
+                height: 2.5em;
+                width: 45%;
+                background-color: rgb(57, 57, 222);
+                color: white;
+                border-radius: 5px;
+                border: none;
+                height: 3em;
+            }
+            
+            .signup input, button {
+                margin-top: 5px;
+            }
+
+            .signup button:hover {
+                background-color: rgb(125, 193, 243);
+                color: white;
+            }
+            .signup button:active {
+                background-color: rgb(57, 57, 222);
+                color: white;
+            }
+
+            .ride {
+                text-align: left;
+            }
+
+            .ride p {
+                font-size: 25px;
+                font-family: Arial, sans-serif;
+            }
+
+            .ride input {
+                width: 96%;
+                height: 2.5em;
+                margin: 2px;
+                background-color: rgb(230, 230, 230);
+                border: none;
+                border-radius: 1px;
+            }
+
+            .ride button {
+                background-color: rgb(230, 230, 230);
+                height: 3.8em;
+                border: none;
+                border-radius: 1px;
+                margin-top: 25px;
+                font-size: 12px;
+                width: 110px;
+            }
+
+            .ride button:hover {
+                background-color: black;
+                color: white;
+            }
+            .ride button:active {
+                background-color: rgb(57, 57, 222);
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>  
+        <fieldset  style="width: 50%; margin: auto; padding: 5px;">
+        <div class="sign">
+            <input type="text" size="15" placeholder="Name"> 
+            <input type="text" size="15" placeholder="Email">
+        </div>
+        </fieldset>
+        <br>
+
+        <fieldset  style="width: 50%; margin: auto; padding: 5px;">
+        <div class="survey">
+            <p>Thanks for chatting with our customer support. Would you like to take our quick survey?</p>
+            <button value="yes"> Yes</button>
+            <button value="no"> No</button>
+        </div>
+        </fieldset>
+        <br>
+
+        <fieldset style="width: 50%; margin: auto; padding: 5px;">
+        <div class="google">
+            <img src="images/google.png" alt="Google Logo" height="100px">
+            <input type="text" size="50" placeholder="Search Google or type a URL">
+        </div>
+        </fieldset>
+        <br>
+
+        <fieldset style="width: 50%; margin: auto; padding: 5px;">
+        <div class="signup">
+            <input type="text" size="15" placeholder=" First Name"> 
+            <input type="text" size="15" placeholder=" Last Name">
+            <input type="text" size="15" placeholder=" Email">
+            <button type="submit"> Sign Up</button>
+        </div>
+        </fieldset>
+        <br> 
+
+        <fieldset style="width: 50%; margin: auto; padding: 5px;">
+        <div class="ride">
+            <p> Request a ride now</p>
+            <input type="text" size="15" placeholder=" Enter pickup location"> 
+            <input type="text" size="15" placeholder=" Enter destination">
+            <button type="submit"> Request now</button>
+            <button type="submit"> Schedule for later</button>
+        </div>
+        </fieldset>
+          
+    </body>
+
+</html>

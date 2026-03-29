@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume with CSS</title>
+
+    <style>
+        body {
+            background-color: #d5d5dc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 100px;
+        }
+
+        .section {
+            width: 60vw;
+            min-height: 300vh;
+            background: #001840;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section img {
+            border-radius: 50%;
+            height: 180px;
+            border-style: solid;
+            border-color: #ffffff;
+        }
+
+        #text a {
+            text-decoration: none;
+        }
+        
+        .section h1,
+        h2,
+        h3,
+        p,
+        li,
+        tr {
+            color: #ffffff;
+        }
+
+        .section p,
+        li {
+            font-size: x-small;
+            line-height: 3;
+        }
+
+        .section .p2 {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .section tr {
+            font-size: small;
+            border-color: #ffffff;
+        }
+
+        .section table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .section ul {
+            list-style-position: inside;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .navbar a:link {
+            color: #ffffff;
+        }
+
+        .navbar a:visited {
+            color: #ffb900;
+        }
+
+        .navbar a:hover {
+            color: #ade1fb;
+        }
+
+        .navbar a:active {
+            color: #00b4d8;
+        }
+
+        .navbar ul {
+            list-style: none;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            font-size: medium;
+        }
+
+        .navbar a {
+            text-decoration: none;
+        }
+
+        .shortcut a:hover {
+            color: #ade1fb;
+        }
+
+        .shortcut a:active {
+            color: #00b4d8;
+        }
+
+        .shortcut a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: small;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="section">
+        <a id="top"></a>
+        <p> <br></p>
+        <img src="images/me.jpg" height="100px" alt="My Photo" style="border-width: 3px;">
+        <h1 id="text"> JULIUS F. DIMARUCUT</h1>
+        <hr width="600">
+        <br>
+
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#summary">SUMMARY</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
+                    <li><a href="#work">EXPERIENCE</a></li>
+                    <li><a href="#hardware">HARDWARE SKILLS</a></li>
+                    <li><a href="#software">SOFTWARE SKILLS</a></li>
+                    <li><a href="#references">CHARACTER REFERENCES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+
+
+        <h2>CONTACTS</h2>
+        <hr width="600">
+        <p id="text">
+
+            <b>Email:<br><a href="mailto:juliusdimarucut898@gmail.com"></b>juliusdimarucut898@gmail.com</a><br>
+            <b>Phone:</b><br> 09785634120<br>
+            <b>Address:</b><br> Santa Cruz, Concepcion, Tarlac<br>
+            <b>LinkedIn:</b><br> juliusdimarucut898@gmail.com<br>
+        </p>
+        <br>
+
+        <h2 id="summary"> SUMMARY </h2>
+        <hr width="600">
+        <p class="p2"> Highly motivated IT professional seeking to apply skills in coding, software development, tech
+            support, and
+            design to drive innovation and efficiency in a company. Eager for a challenge where I can leverage my
+            expertise to drive business growth, solve solutions, build relations, enjoy, and lead teams to success in a
+            dynamic and innovative environment. Multimedia specialist skilled in design, coding, and content creation. Proficient in tools such
+            as Adobe, Figma, HTML/CSS, JS frameworks. Creates engaging visuals, interactive experiences, and digital content.
+            Passionate about blending creativity with tech to deliver impactful solutions </p>
+        <br>
+
+        <h2 id="education"> EDUCATIONAL BACKGROUND </h2>
+        <hr width="600">
+        <ul>
+            <li> STEM, Benigno S Aquino National High School, 2025 <br>
+            <li> Benigno S Aquino National High School, 2023 <br>
+            <li> Santa Cruz Elementary School, 2018 <br>
+        </ul>
+        <br>
+
+        <h2 id="work"> WORK EXPERIENCE </h2>
+        <hr width="600">
+        <p>
+            <b>Tarlac Electric Cooperative (TARELCO)<br>
+                February 2024 - March 2024</b><br>
+            Supervisory Control and Data Acquisition (SCADA) - Work Immmersion
+        </p>
+        <br>
+
+        <h2 id="hardware"> HARDWARE SKILLS </h2>
+        <hr width="600">
+        <ul>
+            <li> Server configuration and maintenance</li>
+            <li> Audio-visual equipment configuration</li>
+            <li> Hardware installation and repair</li>
+        </ul>
+        <br>
+
+        <h2 id="software"> SOFTWARE SKILLS </h2>
+        <hr width="600">
+        <ul>
+            <li> HTML/CSS</li>
+            <li> Multimedia</li>
+            <li> Figma (collaborative design)</li>
+        </ul>
+        <br>
+
+        <h2 id="references"> CHARACTER REFERENCES </h2>
+        <table border="1" width="90%" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>FULL NAME</th>
+                    <th>DESIGNATION</th>
+                    <th>EMAIL</th>
+                    <th>CONTACT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Joden Perez</td>
+                    <td>TARELCO employee</td>
+                    <td>perezjoden2378@gmail.com</td>
+                    <td>09123456789</td>
+                </tr>
+                <tr>
+                    <td>Edelwisa Reyes</td>
+                    <td>Teacher</td>
+                    <td>edelreyes7262@gmail.com</td>
+                    <td>09876543210</td>
+                </tr>
+                <tr>
+                    <td>Remedios Dimarucut</td>
+                    <td>Family Member</td>
+                    <td>remediosdimarucut@gmail.com</td>
+                    <td>09873637278</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <footer class="footer">
+            <p><i>I HEREBY CERTIFY</i> that the information provided in this resume is complete, true and correct to the
+                best of my knowledge.</p>
+        </footer>
+        <br>
+        <br>
+        <br>
+
+        <nav class="shortcut">
+            <a href="#top">Back to top ^</a>
+        </nav>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPortfolio</title>
+
+    <!-- Import Manga font -->
+    <link href="https://fonts.cdnfonts.com/css/anime-ace" rel="stylesheet">
+
+    <style>
+        body {
+            color: #ffffff;
+            background-color: #1b1a1a;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+        header {
+            position: sticky;
+            top: 0;
+            font-size: large;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            margin-top: 9px;
+            margin-bottom: 15px;
+        }
+        header table {
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        header #menu {
+            text-align: right;
+        }
+
+
+        .intro{
+            padding-left: 3.5%;
+        }
+        .intro .category {
+            line-height: 0.9;
+        }
+
+
+        .category {
+            display: inline-flex;
+            gap: 12px;
+        }
+        .category p {
+            background-color: rgb(62, 62, 62);
+            height: 28px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+        }
+
+
+        nav {
+            display: inline-flex;
+            gap: px;
+            padding-left: 2.5%;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #1b1a1a;
+            height: 30px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .info {
+            font-size: small;
+            padding-left: 2.5%;
+            margin-bottom: 30px;
+        }
+        .info table {
+            line-height: 0%;
+        }         
+        .info p {
+            color: white;
+            text-decoration: none;
+            padding-left: 10px;
+        }     
+        .info hr {
+            margin: 0px;
+        }
+    
+
+        .panel {
+            color: black;
+            background-color: white;
+            text-align: center;
+            font-family: 'Anime Ace', sans-serif; /*Anime Ace font*/
+        } 
+        .panel #img1 {
+            padding-bottom: 75px
+        }
+        .panel #p1 {
+            padding-bottom: 150px;
+            padding-top: 75px;
+        } 
+        .panel .t1 {
+            margin-top: 200px;
+            margin-bottom: 200px;
+        }
+        .panel .t1 th {
+            width: 33%;
+        }
+        .panel .t1 th img {
+            border-style: solid;
+            border-width: 2px;
+        }
+        .panel #img2 {
+            margin-top: 250px;
+        }        
+        .panel .t3 #img3 {
+            text-align: right;
+        }
+        .panel .t3 #img4 {
+            text-align: left;
+        }
+        .panel .t3 th img{
+            border-style: solid;
+            border-width: 2px;
+            margin: 5px; 
+        }
+        .panel .t4 {
+            margin-top: 180px;
+            margin-bottom: 200px;
+            margin-left: 35px;
+            margin-right: 35px;
+        }
+        .panel .t4 th p {
+            font-family:'Courier New', Courier, monospace;
+            line-height: 2;
+        }
+        .panel .t5 th img {
+            border-style: solid;
+            border-width: 2px;
+        }
+        .panel .hobby {
+            margin-top: 180px;
+            margin-bottom: 200px;
+        }
+        .panel .hobby h2, .panel .hobby p {
+            text-align: left;
+        }
+        .panel .hobby #img7 {
+            opacity: 90%;
+        }
+        .panel .education {
+            margin-bottom: 200px;
+        }
+        .panel .education h2 {
+            text-align: left;
+            padding-left: 10px;
+        }
+        .panel .education ul {
+            text-align: right;
+            padding-right: 10px;
+            font-size: medium;
+            list-style: none; 
+        }
+        .panel .t6 th img {
+            border-style: solid;
+            border-width: 2px;
+        }
+        .panel .projects {
+            margin-bottom: 250px;
+            margin-top: 180px;
+        }
+        .panel .projects #mid {
+            background-color: rgb(19, 50, 80);
+            color: #ffffff;
+        }
+        .panel .projects th {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .panel .projects th p {
+            font-family:'Courier New', Courier, monospace;
+            line-height: 2;
+        }
+        .panel .projects th img {
+            border-color: rgb(19, 50, 80);
+            border-style: solid;
+            border-width: 3px;
+            
+        }
+        
+
+        .panel footer {
+            background-color: #1b1a1a;
+            color: #ffffff;
+            padding: 20px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: left;
+        }
+        .panel footer img, .panel footer #nameko {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .panel footer .sub {
+            padding-left: 40%;
+        }
+        .panel footer a {
+            background-color: rgb(16, 135, 16);
+            padding: 7px;
+            border-radius: 6px;
+            text-align: center;
+        }    
+        
+
+        /* Navigation Links */
+        header a:link, header a:visited {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: rgb(62, 62, 62);
+            height: 30px;
+            width: 80px;
+        }
+        .info td a {
+            display: block;
+            text-decoration: none;
+            width: 96%;
+            height: 44px;
+            color: rgb(62, 62, 62);
+            padding: 8px;
+        }
+        .info td a:link {
+            background-color: #1b1a1a;
+        }
+        .info td a:visited {
+            background-color: rgb(65, 65, 65);
+        }
+        .info td a:visited p {
+            color: rgb(164, 164, 164);
+        }
+        .info td a:hover {
+            background-color: rgb(97, 97, 97);
+        }
+        .info td a:active {
+            background-color: rgb(169, 169, 169);
+        }
+        footer a:hover {
+            background-color: rgb(117, 188, 117);
+        }    
+
+        
+        /* Responsive Design */
+        body {
+            display: flex;
+            height: 100vh;        
+            overflow: hidden;     /* Pprevent body from scrolling */
+        }
+
+        .section {
+            width: 40%;
+            height: 100vh;        
+            overflow-y: auto;     /* own scrollbar */
+        }
+
+        .panel {
+            width: 60%;
+            height: 100vh;        
+            overflow-y: auto;     /* own scrollbar */
+        }
+        .section::-webkit-scrollbar, 
+        .panel::-webkit-scrollbar { /* remove scroll bars */
+            display: none;
+        }
+
+        
+        @media screen and (max-width: 900px) {
+        body {
+            flex-direction: column;
+            height: auto;         /* for body grow naturally */
+            overflow: visible;
+        }
+        .section {
+            width: 100%;
+        }
+        .panel {
+            width: 100%;
+        }
+        .section, .panel {
+            height: auto;         /* no fixed height when stacked */
+            overflow-y: visible;
+        }
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <!-- SECTION -->
+    <div class="section">
+        <header id="heading">
+            <table>
+                <tr>
+                    <td><a href="#back"><b> < </b></a></td>
+                    <td id="menu"><b> : </b></td>
+                </tr>
+            </table>
+        </header>
+
+        <a id="back"></a><img src="images/profile.png" alt="My Picture" width="65%" text-align="center" style="display: block; margin: 0 auto; border-radius: 2px;">
+
+        <div class="intro">
+            <p> <b>7.10M views</b></p>
+            <h1> It's Me, Myself and I </h1>
+            <p><u>Julius Dimarucut ✅</u></p>
+            <p> Welcome to my portfolio! Here you can find some of my projects and accomplishments.</p>
+
+            <div class="category">
+            <p> Slice of life</p> <p> College</p> <p>Cat-loving Creature</p>
+            </div>
+
+            <p> 💓1.5K Super Hearts</p>
+            <br>
+        </div>
+
+        <nav>
+            <a href="#eps"> Episodes</a> 
+            <a> More</a>
+        </nav>
+            <hr>
+
+        <div class="info">
+            <p> 6 episodes</p>
+            <table>
+                <tr id="eps">
+                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td width="100%"><a href="#back"><p> 00: Heading</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="#abtme"><p> 01: About Me</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="#cont"><p> 02: Contacts</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="#hobi"><p> 03: Hobbies</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="#edu"><p> 04: Education</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="#proj"><p> 05: Projects</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- PANEL -->
+    <div class="panel">
+        <img id="img1" src="images/img1.png" alt="panel_image" width="100%" height="100%">
+        
+        <p id="p1"> Money is Power, Toni Flower</p>
+        
+        <table class="t1"> 
+            <tr>
+                <th> <img src="images/img2.jpg" alt="panel_image" width="45%" height="45%" style="margin-right:80px;"></th>
+            </tr>
+            <tr>
+                <th> <img src="images/img3.jpg" alt="panel_image" width="45%" height="45%" style="margin-top:30px; margin-bottom:30px;"></th>
+            </tr>
+            <tr>
+                <th> <img src="images/img4.jpg" alt="panel_image" width="45%" height="45%" style="margin-left:80px;"></th>
+            </tr>
+        </table>
+        
+        <!-- About Me Section -->
+        <a id="abtme"></a>
+        <table>
+            <tr>
+                <th style="width: 45%;"><h2> About Me</h2><br>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non est fugiat laborum rem, maiores architecto esse tenetur facilis harum debitis illum quos magni consectetur velit repellat exercitationem voluptates delectus corporis.</p></th>
+                <th> <img src="images/img5.png" alt="panel_image" width="101%" height="101%"></th></th>
+            </tr>
+        </table>
+        
+        <div id="img2">
+            <img src="images/img6.png" alt="panel_image" width="100%" height="100%">
+        </div>
+        
+        <table class="t3"> 
+            <tr>
+                <th id="img3"> <img src="images/img7.jpg" alt="panel_image" width="65%" height="65%"></th>
+                <th id="img4"> <img src="images/img8.jpg" alt="panel_image" width="65%" height="65%" style="margin-top: 300px;"></th>
+            </tr>
+        </table>
+        
+        <!-- Contacts Section -->
+         <a id="cont"></a>
+        <table class="t4">
+            <tr>            
+                <th><img src="images/img9.png" alt="panel_image" width="30%"></th>
+                <th><h2> Contacts</h2></th>
+                <th><img src="images/img9.png" alt="panel_image" width="30%"></th>
+            </tr>
+            <tr>
+                <th colspan="3"><p style="background-color:rgb(19, 50, 80); width: 100%; color:#8291ca;">IF YOU'D LIKE TO GET IN TOUCH: 
+                    <p>Email:<br> juliusdimarucut898@gmail.com<br>
+                    <b>Phone:<br> 09785634120<br>
+                    <p>Address:<br> Santa Cruz, Concepcion, Tarlac<br>
+                    <p>LinkedIn:<br><a href="mailto:juliusdimarucut898@gmail.com">juliusdimarucut898@gmail.com</a>.</p>
+                    <p style="background-color: rgb(19, 50, 80);width: 100%; height: 13px; color:rgb(255, 255, 255);">-</p> 
+                </th>
+            </tr>
+        </table>
+        
+        <table class="t5"> 
+            <tr>
+                <th id="img5"> <img src="images/img9-1.jpg" alt="panel_image" width="65%" style="margin-right:20%; margin-bottom:30px;"></th>
+            </tr>
+            <tr>
+                <th id="img6"> <img src="images/img9-0.jpg" alt="panel_image" width="65%" style="margin-left:20%"></th>
+            </tr>
+        </table>
+        
+        
+        <!-- Hobbies Section -->
+         <a id="hobi"></a>
+         <div class="hobby">
+            <h2 style="padding: 10px;"> Hobbies</h2>
+            <p style="padding: 10px;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non est fugiat laborum rem, maiores architecto esse tenetur facilis harum debitis illum quos magni consectetur velit repellat exercitationem voluptates delectus corporis.</p></th>
+            
+            <div id="img7">
+                <img src="images/img9-2.jpg" alt="panel_image" width="100%" height="100%">
+            </div>
+        </div>
+
+
+        <!-- Education Section -->
+         <a id="edu"></a>
+        <div class="education">
+            <h2> Education</h2>
+            <img src="images/img9-3.png" alt="panel_image" width="100%" height="100%">   
+            <ul>
+                <li>Pampanga State Agricultural University, 2025-2029</li>
+                <li>STEM, Benigno S Aquino National High School, 2025</li>
+                <li>Benigno S Aquino National High School, 2023</li>
+                <li>Santa Cruz Elementary School, 2018</li>
+            </ul>
+        </div>
+    
+        <table class="t6"> 
+                <tr>
+                    <th id="img9-4"> <img src="images/img9-4.jpg" alt="panel_image" width="60%" style="margin-bottom:30px;"></th>
+                </tr>
+                <tr>
+                    <th id="img9-5"> <img src="images/img9-5.jpg" alt="panel_image" width="75%" ></th>
+                </tr>
+                <tr>
+                    <th id="img9-6"> <img src="images/img9-6.jpg" alt="panel_image" width="60%" style="margin-top:30px;"></th>
+                </tr>
+        </table>
+           
+        
+        <!-- Projects Section -->
+         <a id="proj"></a>
+        <div class="projects">
+            <h2> My Projects</h2>
+            
+            <table width=100% height="100%">
+                <tr>
+                    <th id="mid"colspan="2"><h3> Midterms </h3></th>
+                </tr>
+                <tr>
+                    <th><p> For my midterm project, I created a website that showcases my favorite travel </p></th>
+                    <th><img src="images/pro1.png" alt="panel_image" width="100%" height="100%"></th>
+                </tr>
+                <tr>
+                    <th><img src="images/pro2.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p> For my midterm project, I created a website that showcases my favorite travel </p></th>
+                </tr>
+                <tr>
+                    <th><p> For my midterm project, I created a website that showcases my favorite travel </p></th>
+                    <th><img src="images/pro3.png" alt="panel_image" width="100%" height="100%"></th>
+                </tr>
+                <tr>
+                    <th><img src="images/pro4.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p> For my midterm project, I created a website that showcases my favorite travel </p></th>
+                </tr>
+                <tr>
+                    <th><p> For my midterm project, I created a website that showcases my favorite travel </p></th>
+                    <th><img src="images/pro5.png" alt="panel_image" width="100%" height="100%"></th>
+                </tr>
+                <tr>
+                    <th><img src="images/pro6.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p> For my midterm project, I created a website that showcases my favorite travel </p></th>
+                </tr>
+            </table>
+        </div>
+       
+        <img src="images/lastimg.png" alt="panel_image" width="100%" height="100%">
+        
+        <footer>
+            <h5> Creator</h5>
+            <img src="images/me.jpg" alt="panel_image" width="7%" height="7%" style="border-radius: 50%">
+            <p id="nameko"><b>Julius Dimarucut ✅</b></p>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maxime repellendus magnam maiores nam placeat ipsum cupiditate beatae eos numquam, culpa excepturi neque aspernatur officia sed perspiciatis ea quae natus.</p>
+            
+            <div class="sub">
+            <a> + Subcribe</a>
+            </div>
+        </footer>
+    
+    </div>
+</body>
+</html>
