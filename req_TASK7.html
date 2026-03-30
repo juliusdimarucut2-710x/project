@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p7_JPortfolio</title>
+
+    <style>
+         body {
+            color: #ffffff;
+            background-color: #1b1a1a;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+        header {
+            position: sticky;
+            top: 0;
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-top: 9px;
+            margin-bottom: 15px;
+        }
+        header table {
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        header #menu {
+            text-align: right;
+        }
+
+
+        .intro {
+            padding-left: 3.5%;
+        }
+        .intro .category {
+            line-height: 0.9;
+        }
+
+
+        .category {
+            display: inline-flex;
+            gap: 12px;
+        }
+        .category p {
+            background-color: rgb(62, 62, 62);
+            height: 28px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+        }
+
+
+        nav {
+            display: inline-flex;
+            gap: px;
+            padding-left: 2.5%;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #1b1a1a;
+            height: 30px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        nav a#active {
+            background-color: rgb(62, 62, 62);
+        }
+
+
+        .info {
+            font-size: small;
+            padding-left: 2.5%;
+            margin-bottom: 30px;
+        }
+        .info table {
+            line-height: 0%;
+        }
+        .info p {
+            color: white;
+            text-decoration: none;
+            padding-left: 10px;
+        }
+        .info hr {
+            margin: 0px;
+        }
+
+
+        .panel {
+            color: black;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: 'Anime Ace', sans-serif;
+            /*Anime Ace font*/
+        }
+
+
+        .panel footer {
+            background-color: #1b1a1a;
+            color: #ffffff;
+            padding: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: left;
+        }
+        .panel footer img,
+        .panel footer #nameko {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .panel footer .sub {
+            padding-left: 40%;
+        }
+        .panel footer a {
+            background-color: rgb(16, 135, 16);
+            padding: 7px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+
+        /* Navigation Links */
+        header a:link,
+        header a:visited {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            background-color: rgb(62, 62, 62);
+            height: 30px;
+            width: 80px;
+        }
+
+        .info td a {
+            display: block;
+            text-decoration: none;
+            width: 96%;
+            height: 44px;
+            color: rgb(62, 62, 62);
+            padding: 8px;
+        }
+        .info td a:link {
+            background-color: #1b1a1a;
+        }
+        .info td a:visited {
+            background-color: rgb(65, 65, 65);
+        }
+        .info td a:visited p {
+            color: rgb(164, 164, 164);
+        }
+        .info td a:hover {
+            background-color: rgb(97, 97, 97);
+        }
+        .info td a:active {
+            background-color: rgb(169, 169, 169);
+        }
+
+        footer a:hover {
+            background-color: rgb(117, 188, 117);
+        }
+
+        .project a {
+            background-image: linear-gradient(to right, rgb(94, 165, 27), rgb(244, 235, 63));
+            border-radius: 3px;
+            text-decoration: none;
+            color: beige;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 50px;
+            margin-bottom: 30px;
+
+            display: inline-block;
+            padding: 8px 20px;
+            width: 150px;
+        }
+        .project a:hover {
+            background-image: linear-gradient(to right, rgb(143, 189, 100), rgb(243, 240, 185));
+        }
+        .project a:active {
+            background-image: linear-gradient(to right, rgb(94, 165, 27), rgb(244, 235, 63));
+        }
+
+
+        /* Responsive Design */
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden; /* Pprevent body from scrolling */
+        }
+        .section {
+            width: 40%;
+            height: 100vh;
+            overflow-y: auto; /* own scrollbar */
+        }
+        .panel {
+            width: 60%;
+            height: 100vh;
+            overflow-y: auto; /* own scrollbar */
+        }
+
+        /* remove scroll bars */
+        .section::-webkit-scrollbar,
+        .panel::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        @media screen and (max-width: 900px) {
+            body {
+                flex-direction: column;
+                height: auto;  /* for body grow naturally */
+                overflow: visible;
+            }
+            .section {
+                width: 100%;
+            }
+            .panel {
+                width: 100%;
+            }
+            .section,
+            .panel {
+                height: auto;  /* no fixed height when stacked */
+                overflow-y: visible;
+            }
+        }
+    </style>
+    <!-- Import Manga font -->
+    <link href="https://fonts.cdnfonts.com/css/anime-ace" rel="stylesheet">
+</head>
+
+
+<body>
+    <!-- SECTION -->
+    <div class="section">
+        <header id="heading">
+            <table>
+                <tr>
+                    <td><a href="ss_center.html"><b> < </b></a></td>
+                    <td id="menu"><b> : </b></td>
+                </tr>
+            </table>
+        </header>
+
+        <a id="back"></a><img src="images/profile.png" alt="My Picture" width="65%" text-align="center" style="display: block; margin: 0 auto; border-radius: 2px;">
+
+        <div class="intro">
+            <p> <b>7.10M views</b></p>
+            <h1> It's Me, Myself and I </h1>
+            <p><u>Julius Dimarucut ✅</u></p>
+            <p>Welcome to my portfolio! Here you will find a curated collection of my projects, accomplishments, and creative explorations that highlight both my technical skills and personal growth. As you explore the different sections, I hope you gain a deeper appreciation of my work and the passion I bring to every project. </p>
+
+            <div class="category">
+            <p> Slice of life</p> <p> College</p> <p>Cat-loving Creature</p>
+            </div>
+
+            <p> 💓1.5K Super Hearts</p>
+            <br>
+        </div>
+
+        <nav>
+            <a href="GITHUB_portfolio.html"> Sections</a> 
+            <a href="#proj" id="active"> Projects</a>
+        </nav>
+            <hr>
+
+        <div class="info">
+            <p> 7 projects</p>
+            <table>
+                <tr id="eps">
+                    <td><img src="images/pro1.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td width="100%"><a href="req_TASK1.html#panel" ><p> 00: TASK 1: Resume</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/pro2.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="req_TASK2.html#panel" ><p> 01: TASK 2: Nested Lists</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/pro3.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="req_TASK3.html#panel"><p> 02: TASK 3: Image Map</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/pro4.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="req_TASK4.html#panel"><p> 03: TASK 4: HTML Form </p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/pro5.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="req_TASK5.html#panel"><p> 04: TASK 5: Resume with CSS</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/pro6.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="req_TASK6.html#panel"><p> 05: TASK 6: Display Property</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+                <tr>
+                    <td><img src="images/pro7.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><a href="req_TASK7.html#panel" style="background-color:#4a7582"><p> 06: TASK 7: Semantics</p></a></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- PANEL -->
+    <div class="panel" id="panel">
+        <p style="margin-top: 50px"> <b>LAB TASK 7:</b> Semantics Webpage</p>
+        <p style="font-size:13px; font-family:'Courier New', Courier, monospace; padding-left: 20px; padding-right: 20px;"> Make a webpage that uses semantic HTML elements (header, nav, main, section, article, aside, footer) to structure the content in a meaningful way. Additionally, use @media queries to make the page responsive.</p>
+        <table class="project">
+            <tr>
+                <th>
+                     <p style="text-align: left; padding-left: 10px; height: 10px; font-family:'Courier New', Courier, monospace"> Sample Output</p>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <img src="images/task7-ss.png" alt="My Picture" width="100%" height="auto" style="border-radius: 2px;">
+                </th>
+            <tr>
+                <th>
+                     <p style="text-align: left; padding-left: 10px; height: 10px; font-family:'Courier New', Courier, monospace"> Sample Code</p>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <img src="images/task7-snap.png" alt="My Picture" width="100%" height="auto" style="border-radius: 2px;">
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a href="TASK7-semantics.html">View Actual Output</a>
+                </th>
+            </tr>
+        </table>
+       
+        
+        
+        <footer>
+            <h5> Creator</h5>
+            <img src="images/me.jpg" alt="panel_image" width="7%" height="7%" style="border-radius: 50%">
+            <p id="nameko"><b>Julius Dimarucut ✅</b></p>
+            <p> Thank you for visiting my portfolio! I am happy to share with you the projects and experiences that reflect my growth, creativity. This portfolio it represents the effort I have invested in developing my skills, exploring new ideas, and applying concepts in meaningful ways.</p>
+            
+            <div class="sub">
+            <a> + Subcribe</a>
+            </div>
+        </footer>
+    
+    </div>
+</body>
+</html>
