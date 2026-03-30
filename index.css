@@ -306,6 +306,28 @@
      padding: 8px 20px;
      width: 150px;
  }
+ .projects {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.projects table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+    box-sizing: border-box;
+}
+
+.projects table th,
+.projects table td {
+    word-break: break-word;
+    overflow: hidden;
+}
+.panel {
+    overflow: hidden;
+    box-sizing: border-box;
+}
 
 
  /* Responsive Design */
