@@ -4,313 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JPortfolio</title>
-
-    <!-- Import Manga font -->
-    <link href="https://fonts.cdnfonts.com/css/anime-ace" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 
     <style>
-        body {
-            color: #ffffff;
-            background-color: #1b1a1a;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-
-        header {
-            position: sticky;
-            top: 0;
-            font-size: large;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            margin-top: 9px;
-            margin-bottom: 15px;
-        }
-        header table {
-            width: 100%;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-        header #menu {
-            text-align: right;
-        }
-
-
-        .intro{
-            padding-left: 3.5%;
-        }
-        .intro .category {
-            line-height: 0.9;
-        }
-
-
-        .category {
-            display: inline-flex;
-            gap: 12px;
-        }
-        .category p {
-            background-color: rgb(62, 62, 62);
-            height: 28px;
-            width: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 3px;
-        }
-
-
-        nav {
-            display: inline-flex;
-            gap: px;
-            padding-left: 2.5%;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            background-color: #1b1a1a;
-            height: 30px;
-            width: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-
-        .info {
-            font-size: small;
-            padding-left: 2.5%;
-            margin-bottom: 30px;
-        }
-        .info table {
-            line-height: 0%;
-        }         
-        .info p {
-            color: white;
-            text-decoration: none;
-            padding-left: 10px;
-        }     
-        .info hr {
-            margin: 0px;
-        }
-    
-
-        .panel {
-            color: black;
-            background-color: white;
-            text-align: center;
-            font-family: 'Anime Ace', sans-serif; /*Anime Ace font*/
-        } 
-        .panel #img1 {
-            padding-bottom: 100px
-        }
-        .panel #p1 {
-            padding-bottom: 150px;
-            padding-top: 75px;
-        } 
-        .panel .t1 {
-            margin-top: 200px;
-            margin-bottom: 200px;
-        }
-        .panel .t1 th {
-            width: 33%;
-        }
-        .panel .t1 th img {
-            border-style: solid;
-            border-width: 5px;
-            border-color: rgb(0, 0, 0);
-        }
-        .panel #img2 {
-            margin-top: 250px;
-        }        
-        .panel .t3 #img3 {
-            text-align: right;
-        }
-        .panel .t3 #img4 {
-            text-align: left;
-        }
-        .panel .t3 th img{
-            border-style: solid;
-            border-width: 5px;
-            margin: 5px; 
-        }
-        .panel .t4 {
-            margin-top: 180px;
-            margin-bottom: 200px;
-            margin-left: 35px;
-            margin-right: 35px;
-        }
-        .panel .t4 th p {
-            font-family:'Courier New', Courier, monospace;
-            line-height: 2;
-        }
-        .panel .t5 th img {
-            border-style: solid;
-            border-width: 5px;
-        }
-        .panel .hobby {
-            margin-top: 180px;
-            margin-bottom: 200px;
-        }
-        .panel .hobby h2, .panel .hobby p {
-            text-align: left;
-        }
-        .panel .hobby #img7 {
-            opacity: 90%;
-        }
-        .panel .education {
-            margin-bottom: 200px;
-        }
-        .panel .education h2 {
-            text-align: left;
-            padding-left: 10px;
-        }
-        .panel .education ul {
-            text-align: right;
-            padding-right: 10px;
-            font-size: medium;
-            list-style: none; 
-        }
-        .panel .t6 th img {
-            border-style: solid;
-            border-width: 5px;
-        }
-        .panel .projects {
-            margin-bottom: 250px;
-            margin-top: 180px;
-        }
-        .panel .projects #mid {
-            background-color: rgb(103, 147, 41);
-            color: #ffffff;
-        }
-        .panel .projects th {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-        .panel .projects th p {
-            font-family:'Courier New', Courier, monospace;
-            line-height: 1;
-        }
-        .panel .projects th img {
-            border-color: rgb(103, 147, 41);
-            border-style: solid;
-            border-width: 5px;
-        }
         
-
-        .panel footer {
-            background-color: #1b1a1a;
-            color: #ffffff;
-            padding: 20px;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            text-align: left;
-        }
-        .panel footer img, .panel footer #nameko {
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .panel footer .sub {
-            padding-left: 40%;
-        }
-        .panel footer a {
-            background-color: rgb(16, 135, 16);
-            padding: 7px;
-            border-radius: 6px;
-            text-align: center;
-        }
-        
-
-        /* Navigation Links */
-        header a:link, header a:visited {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            background-color: rgb(62, 62, 62);
-            height: 30px;
-            width: 80px;
-        }
-        .info td a {
-            display: block;
-            text-decoration: none;
-            width: 96%;
-            height: 44px;
-            color: rgb(62, 62, 62);
-            padding: 8px;
-        }
-        .info td a:link {
-            background-color: #1b1a1a;
-        }
-        .info td a:visited {
-            background-color: rgb(65, 65, 65);
-        }
-        .info td a:visited p {
-            color: rgb(164, 164, 164);
-        }
-        .info td a:hover {
-            background-color: rgb(97, 97, 97);
-        }
-        .info td a:active {
-            background-color: rgb(169, 169, 169);
-        }
-        footer a:hover {
-            background-color: rgb(117, 188, 117);
-        }    
-        .projects a {
-            background-image:linear-gradient(to right,rgb(94, 165, 27), rgb(244, 235, 63));
-            border-radius: 3px;
-            text-decoration: none;
-            color: beige;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-            display: inline-block;   /* add this so width/height work */
-            padding: 8px 20px;       /* controls height and width of background */
-            width: 150px;
-        }
-
-        
-        /* Responsive Design */
-        body {
-            display: flex;
-            height: 100vh;        
-            overflow: hidden;     /* Pprevent body from scrolling */
-        }
-
-        .section {
-            width: 40%;
-            height: 100vh;        
-            overflow-y: auto;     /* own scrollbar */
-        }
-
-        .panel {
-            width: 60%;
-            height: 100vh;        
-            overflow-y: auto;     /* own scrollbar */
-        }
-        .section::-webkit-scrollbar, 
-        .panel::-webkit-scrollbar { /* remove scroll bars */
-            display: none;
-        }
-
-        
-        @media screen and (max-width: 900px) {
-        body {
-            flex-direction: column;
-            height: auto;         /* for body grow naturally */
-            overflow: visible;
-        }
-        .section {
-            width: 100%;
-        }
-        .panel {
-            width: 100%;
-        }
-        .section, .panel {
-            height: auto;         /* no fixed height when stacked */
-            overflow-y: visible;
-        }
-        }
-
     </style>
+    <!-- Import Manga font -->
+    <link href="https://fonts.cdnfonts.com/css/anime-ace" rel="stylesheet">
 </head>
 
 
@@ -332,7 +32,7 @@
             <p> <b>7.10M views</b></p>
             <h1> It's Me, Myself and I </h1>
             <p><u>Julius Dimarucut ✅</u></p>
-            <p> Welcome to my portfolio! Here you can find some of my projects and accomplishments.</p>
+            <p>Welcome to my portfolio! Here you will find a curated collection of my projects, accomplishments, and creative explorations that highlight both my technical skills and personal growth. As you explore the different sections, I hope you gain a deeper appreciation of my work and the passion I bring to every project. </p>
 
             <div class="category">
             <p> Slice of life</p> <p> College</p> <p>Cat-loving Creature</p>
@@ -343,16 +43,16 @@
         </div>
 
         <nav>
-            <a href="#eps"> Episodes</a> 
-            <a> More</a>
+            <a href="#eps" id="active"> Sections</a> 
+            <a href="ss_center.html"> Projects</a>
         </nav>
             <hr>
 
         <div class="info">
-            <p> 6 episodes</p>
+            <p> 6 sections</p>
             <table>
                 <tr id="eps">
-                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><img src="images/header.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
                     <td width="100%"><a href="#back"><p> 00: Heading</p></a></td>
                 </tr>
                 <tr>
@@ -360,7 +60,7 @@
                     <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
                 </tr>
                 <tr>
-                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><img src="images/aboutme.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
                     <td><a href="#abtme"><p> 01: About Me</p></a></td>
                 </tr>
                 <tr>
@@ -368,7 +68,7 @@
                     <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
                 </tr>
                 <tr>
-                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><img src="images/contacts.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
                     <td><a href="#cont"><p> 02: Contacts</p></a></td>
                 </tr>
                 <tr>
@@ -376,7 +76,7 @@
                     <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
                 </tr>
                 <tr>
-                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><img src="images/hobby.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
                     <td><a href="#hobi"><p> 03: Hobbies</p></a></td>
                 </tr>
                 <tr>
@@ -384,7 +84,7 @@
                     <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
                 </tr>
                 <tr>
-                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><img src="images/education.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
                     <td><a href="#edu"><p> 04: Education</p></a></td>
                 </tr>
                 <tr>
@@ -392,7 +92,7 @@
                     <th colspan="2"><hr style="border: 1px solid  rgb(62, 62, 62);"></th>
                 </tr>
                 <tr>
-                    <td><img src="images/me.jpg" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
+                    <td><img src="images/projects.png" alt="My Picture" width="80px" height="58px" style="border-radius: 5%;"></td>
                     <td><a href="#proj"><p> 05: Projects</p></a></td>
                 </tr>
                 <tr>
@@ -407,7 +107,7 @@
     <div class="panel">
         <img id="img1" src="images/img1.png" alt="panel_image" width="100%" height="100%">
         
-        <p id="p1"> Money is Power, Toni Flower</p>
+        <p id="p1"> Focus on the journey, not the destination.</p>
         
         <table class="t1"> 
             <tr>
@@ -419,54 +119,99 @@
             <tr>
                 <th> <img src="images/img4.jpg" alt="panel_image" width="45%" height="45%" style="margin-left:80px;"></th>
             </tr>
+            <tr>
+                <th>
+                    <p style="border-style: solid; border-width: 5px; width: 30%; padding-top: 50px; padding-bottom: 50px; margin-left: 55%;"> HELLO THERE!</p>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <p style="border-style: solid; border-width: 5px; width: 15%; padding-top: 30px; padding-bottom: 20px; margin-left: 40%;"> :></p>
+                </th>
+            </tr>
         </table>
+
+        
         
         <!-- About Me Section -->
         <a id="abtme"></a>
         <table>
             <tr>
-                <th style="width: 45%;"><h2> About Me</h2><br>
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non est fugiat laborum rem, maiores architecto esse tenetur facilis harum debitis illum quos magni consectetur velit repellat exercitationem voluptates delectus corporis.</p></th>
+                <th style="color:white"> -</th>
+                <th style="border-style: solid; border-width: 5px; width: 10%;"><h2> About Me</h2><br>
+                <p style="line-height:2"> I am Julius, an 18 year old Information Technology student with a strong interest in developing technical skills and applying them to practical projects. I am committed to continuous learning and growth in the IT field, with the goal of building expertise that will prepare me for future professional opportunities.</p></th>
                 <th> <img src="images/img5.png" alt="panel_image" width="101%" height="101%"></th></th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <p style="border-style: solid; border-width: 5px; width: 35%; padding-top: 40px; padding-bottom: 40px; margin-left: 20%; border-radius: 40%; line-height:2"> fostering problem‑solving abilities and analytical thinking. </p>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <p style="border-style: solid; border-width: 5px; width: 15%; padding-top: 30px; padding-bottom: 30px; margin-left: 55%;"> ...</p>
+                </th>
             </tr>
         </table>
         
         <div id="img2">
+            <p style="text-align: left; padding: 35px; line-height: 2;"> I like taking photos of nature <br> like this photo of mine:</p>
             <img src="images/img6.png" alt="panel_image" width="100%" height="100%">
         </div>
         
         <table class="t3"> 
             <tr>
                 <th id="img3"> <img src="images/img7.jpg" alt="panel_image" width="65%" height="65%"></th>
-                <th id="img4"> <img src="images/img8.jpg" alt="panel_image" width="65%" height="65%" style="margin-top: 300px;"></th>
-            </tr>
-        </table>
-        
-        <!-- Contacts Section -->
-         <a id="cont"></a>
-        <table class="t4">
-            <tr>            
-                <th><img src="images/img9.png" alt="panel_image" width="30%"></th>
-                <th><h2> Contacts</h2></th>
-                <th><img src="images/img9.png" alt="panel_image" width="30%"></th>
+                <th id="img4"> <p style="border-style: solid; border-width: 5px; width: 30%; padding-top: 50px; padding-bottom: 50px; text-align: center; margin-top: 200px;"> click</p><img src="images/img8.jpg" alt="panel_image" width="65%" height="65%" style="margin-top: 300px;"></th>
             </tr>
             <tr>
-                <th colspan="3"><p style="background-color:rgb(103, 147, 41); width: 100%; color:#ccf190;">IF YOU'D LIKE TO GET IN TOUCH: 
-                    <p>Email:<br> juliusdimarucut898@gmail.com<br>
-                    <b>Phone:<br> 09785634120<br>
-                    <p>Address:<br> Santa Cruz, Concepcion, Tarlac<br>
-                    <p>LinkedIn:<br><a href="mailto:juliusdimarucut898@gmail.com">juliusdimarucut898@gmail.com</a>.</p>
-                    <p style="background-color: rgb(103, 147, 41);width: 100%; height: 13px; color:rgb(255, 255, 255);">-</p> 
+                <th colspan="3">
+                    <p style="border-style: solid; border-width: 5px; width: 40%; padding-top: 70px; padding-bottom: 70px; margin-left: 50%; border-radius: 45%; line-height: 2;"> a brush that paints with light- camera</p>
                 </th>
             </tr>
         </table>
         
+        <!-- Contacts Section -->
+        <a id="cont"></a>
+        <p style="text-align: left; line-height: 2; margin-left: 6%;"> If you'd like to get in touch with me<br> please feel free to reach out!</p>
+        <table style="border-style: solid; border-width: 5px; border-color: #5a4f1c;" class="t4" width="90%" >
+            <tr>            
+                <th id="contact"><h2> Contacts</h2></th>
+            </tr>
+            <tr>
+                <th id="if"><p>IF YOU'D LIKE TO GET IN TOUCH: </th>
+            </tr>
+            <tr>
+                <th>
+                    <p>Email:<br> juliusdimarucut898@gmail.com<br>
+                    <b>Phone:<br> 09785634120<br>
+                    <p>Address:<br> Santa Cruz, Concepcion, Tarlac<br>
+                    <p>LinkedIn:<br><a href="mailto:juliusdimarucut898@gmail.com">juliusdimarucut898@gmail.com</a>.</p>
+                </th>
+            </tr>
+            <tr>
+                <th id="space"><p>-</p></th>
+            </tr>
+        </table>
+        <p style="text-align: center; line-height: 2; margin-left: 6%;"> Im always a call away. </p>
+        
+
         <table class="t5"> 
             <tr>
-                <th id="img5"> <img src="images/img9-1.jpg" alt="panel_image" width="65%" style="margin-right:20%; margin-bottom:30px;"></th>
+                <th id="img5"> <img src="images/img9-1.jpg" alt="panel_image" width="65%" style="margin-right:20%; margin-bottom:10px;"></th>
+            </tr>
+            <tr>
+                <th>
+                    <p> party for you.</p>
+                </th>
             </tr>
             <tr>
                 <th id="img6"> <img src="images/img9-0.jpg" alt="panel_image" width="65%" style="margin-left:20%"></th>
+            </tr>
+            <tr>
+                <th>
+                    <p style="border-style: solid; border-width: 5px; width: 30%; padding-top: 20px; padding-bottom: 20px; margin-left: 60%;"> I like drawing.</p>
+                </th>
             </tr>
         </table>
         
@@ -474,22 +219,27 @@
         <!-- Hobbies Section -->
          <a id="hobi"></a>
          <div class="hobby">
-            <h2 style="padding: 10px;"> Hobbies</h2>
-            <p style="padding: 10px;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non est fugiat laborum rem, maiores architecto esse tenetur facilis harum debitis illum quos magni consectetur velit repellat exercitationem voluptates delectus corporis.</p></th>
-            
+            <h2 style="padding: 10px; border-style: solid; border-width: 5px; width: 35%; padding-top: 20px; padding-bottom: 20px; margin-left: 2%;">  My Hobbies?</h2>
+            <p style="padding: 10px; line-height: 1.6;"> I enjoy spending my free time drawing, taking photos, and cats. Drawing lets me express my imagination and emotions on paper, while photography helps me capture moments and see the world from different perspectives. And i like cats</p></th>
+            .
             <div id="img7">
                 <img src="images/img9-2.jpg" alt="panel_image" width="100%" height="100%">
             </div>
         </div>
 
 
+         <p id="p1"> "always trust the process".</p>
+
+
         <!-- Education Section -->
          <a id="edu"></a>
         <div class="education">
-            <h2> Education</h2>
+            <h2 style="border-style: solid; border-width: 5px; width: 50%; padding-top: 25px; padding-bottom: 25px; margin-left: 2%; text-align: center;"> Education</h2>
             <img src="images/img9-3.png" alt="panel_image" width="100%" height="100%">   
-            <ul>
+            <ul style="line-height: 1.5;">
+                <li style="font-weight: bold;">CURRENTLY:</li>
                 <li>Pampanga State Agricultural University, 2025-2029</li>
+                <li style="font-weight: bold;">GRADUATED:</li>
                 <li>STEM, Benigno S Aquino National High School, 2025</li>
                 <li>Benigno S Aquino National High School, 2023</li>
                 <li>Santa Cruz Elementary School, 2018</li>
@@ -498,7 +248,12 @@
     
         <table class="t6"> 
                 <tr>
-                    <th id="img9-4"> <img src="images/img9-4.jpg" alt="panel_image" width="60%" style="margin-bottom:30px;"></th>
+                    <th id="img9-4"> <img src="images/img9-4.jpg" alt="panel_image" width="60%"></th>
+                </tr>
+                <tr>
+                    <th>
+                        <p> this is oreo the cat</p>
+                    </th>
                 </tr>
                 <tr>
                     <th id="img9-5"> <img src="images/img9-5.jpg" alt="panel_image" width="75%" ></th>
@@ -506,64 +261,82 @@
                 <tr>
                     <th id="img9-6"> <img src="images/img9-6.jpg" alt="panel_image" width="60%" style="margin-top:30px;"></th>
                 </tr>
+                <tr>
+                    <th>
+                        <p style="border-style: solid; border-width: 5px; width: 30%; padding-top: 30px; padding-bottom: 30px; margin-left: 35%;"> I like cats..</p>
+                    </th>
+                </tr>
         </table>
            
         
         <!-- Projects Section -->
-         <a id="proj"></a>
+        <a id="proj"></a>
         <div class="projects">
-            <h2> My Projects</h2>
-            
             <table width=100% height="100%">
+                <tr>
+                    <th id="myprojects"colspan="2"><h2> My Projects</h2></th>
+                </tr>
                 <tr>
                     <th id="mid"colspan="2"><h3> Midterms </h3></th>
                 </tr>
                 <tr>
-                    <th><p style="color: #12205c; font-size: 30px"> MIDTERM TASK 1
-                        <p style="color: #8291ca;"> RESUME
-                        <a href="TASK1-resume.html"><p> View Project </a></p></th>
-                    <th><img src="images/pro1.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p style="color: #e3a700; font-size: 40px"> MIDTERM TASK 1
+                        <p style="color: #a3b658; font-size: 20px"> RESUME </p>
+                        <a href="req_TASK1.html#panel">View Project</a></th>
+                    <th id="pro-img"><img src="images/pro1.png" alt="panel_image" width="100%" height="100%"></th>
                 </tr>
                 <tr>
-                    <th><img src="images/pro2.png" alt="panel_image" width="100%" height="100%"></th>
-                    <th><p style="color: #12205c; font-size: 30px"> MIDTERM TASK 1
-                        <p style="color: #8291ca;"> RESUME
-                        <a href=".html"><p> View Project </a></p></th>
+                    <th id="pro-img"><img src="images/pro2.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p style="color: #e3a700; font-size: 40px"> MIDTERM TASK 2
+                        <p style="color: #a3b658; font-size: 20px"> NESTED LIST </p>
+                        <a href="req_TASK2.html#panel">View Project </a></th>
                 </tr>
                 <tr>
-                    <th><p style="color: #12205c; font-size: 30px"> MIDTERM TASK 1
-                        <p style="color: #8291ca;"> RESUME
-                        <a href=".html"><p> View Project </a></p></th>
-                    <th><img src="images/pro3.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p style="color: #e3a700; font-size: 40px"> MIDTERM TASK 3
+                        <p style="color: #a3b658; font-size: 20px"> IMAGE MAP </p>
+                        <a href="req_TASK3.html#panel">View Project </a></th>
+                    <th id="pro-img"><img src="images/pro3.png" alt="panel_image" width="100%" height="100%"></th>
                 </tr>
                 <tr>
-                    <th><img src="images/pro4.png" alt="panel_image" width="100%" height="100%"></th>
-                    <th><p style="color: #12205c; font-size: 30px"> MIDTERM TASK 1
-                        <p style="color: #8291ca;"> RESUME
-                        <a href=".html"><p> View Project </a></p></th>
+                    <th id="pro-img"><img src="images/pro4.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p style="color: #e3a700; font-size: 40px"> MIDTERM TASK 4
+                        <p style="color: #a3b658; font-size: 20px"> HTML FORM </p>
+                        <a href="req_TASK4.html#panel">View Project </a></th>
                 </tr>
                 <tr>
-                    <th><p style="color: #12205c; font-size: 30px"> MIDTERM TASK 1
-                        <p style="color: #8291ca;"> RESUME
-                        <a href=".html"><p> View Project </a></p></th>
-                    <th><img src="images/pro5.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p style="color: #e3a700; font-size: 40px"> MIDTERM TASK 5
+                        <p style="color: #a3b658; font-size: 20px"> RESUME WITH CSS</p>
+                        <a href="req_TASK5.html#panel">View Project </a></th>
+                    <th id="pro-img"><img src="images/pro5.png" alt="panel_image" width="100%" height="100%"></th>
                 </tr>
                 <tr>
-                    <th><img src="images/pro6.png" alt="panel_image" width="100%" height="100%"></th>
-                    <th><p style="color: #12205c; font-size: 30px"> MIDTERM TASK 1
-                        <p style="color: #8291ca;"> RESUME
-                        <a href=".html"><p> View Project </a></p></th>
+                    <th id="pro-img"><img src="images/pro6.png" alt="panel_image" width="100%" height="100%"></th>
+                    <th><p style="color: #e3a700; font-size: 40px"> MIDTERM TASK 6
+                        <p style="color: #a3b658; font-size: 20px"> DISPLAY PROPERTY</p>
+                        <a href="req_TASK6.html#panel"> View Project </a></th>
+                </tr>
+                <tr>
+                    <th><p style="color: #e3a700; font-size: 40px"> MIDTERM TASK 7
+                        <p style="color: #a3b658; font-size: 20px"> SEMANTICS</p>
+                        <a href="req_TASK7.html#panel">View Project </a></th>
+                    <th id="pro-img"><img src="images/pro7.png" alt="panel_image" width="100%" height="100%"></th>
                 </tr>
             </table>
         </div>
-       
+
+        <p style="text-align: left; padding: 20px; line-height: 2;"> Thats all for my portfolio..<br>
+            thank you.</p>
+        
+        <img src="images/creator.png" alt="panel_image" width="70%" style="padding-top: 200px;">
+
+
         <img src="images/lastimg.png" alt="panel_image" width="100%" height="100%">
         
         <footer>
             <h5> Creator</h5>
-            <img src="images/me.jpg" alt="panel_image" width="7%" height="7%" style="border-radius: 50%">
+            <img src="images/me.jpg" alt="panel_image" width="35px" height="35px" style="border-radius: 50%">
             <p id="nameko"><b>Julius Dimarucut ✅</b></p>
-            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maxime repellendus magnam maiores nam placeat ipsum cupiditate beatae eos numquam, culpa excepturi neque aspernatur officia sed perspiciatis ea quae natus.</p>
+            <p> Thank you for visiting my portfolio! I am happy to share with you the projects and experiences that reflect my growth, creativity. This portfolio it represents the effort I have invested in developing my skills, exploring new ideas, and applying concepts in meaningful ways.</p>
             
             <div class="sub">
             <a> + Subcribe</a>
